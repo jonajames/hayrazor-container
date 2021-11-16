@@ -12,4 +12,6 @@ RUN set -xe && \
     python -m spacy download en_core_web_sm && \
     pip install farm-haystack
 
+ENV PATH="${VENV}/bin:$PATH"
+
 CMD ["rasa"]
